@@ -16,14 +16,20 @@
         <p id="computerchoice-text"></p>
         <p id="wins-text"></p>
         <p id="losses-text"></p>
-        <p id="guesses-left"></p><!--NEW-->
-        <p id="guess-so-far"></p><!--NEW-->
+        <p id="guesses-left-text"></p><!--NEW-->
+        <p id="guess-so-far-text"></p><!--NEW-->
         <!--<p id="ties-text"></p>-->
     </div>
 
     <script type="text/javascript">
+        // Create an array that lists out all options for computer (full alphabet).
+        var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
-
+        // Creating variables to hold the number of wins, losses, guesses left, and letters guessed.
+        var wins = 0;
+        var losses = 0;
+        var guessesLeft = 9;
+        var guessedSofar = 0;
 
 
     </script>
