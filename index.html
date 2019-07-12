@@ -10,6 +10,7 @@
 
     <h1>The Psychic Game</h1>
 
+    <!--HTML for instructions and counters for game-->
     <div>
         <p id="directions-text">Guess what letter I'm thinking of</p>
         <p id="userchoice-text"></p>
@@ -41,6 +42,14 @@
         var guessSoFarText = document.getElementById("guess-so-far-text");
         // var tiesText = document.getElementById("ties-text");
 
+        // This function runs whenever the user presses a key.
+        document.onkeyup = function(event) {
+
+            // Determines which key was pressed.
+            var userGuess = event.key;
+
+            // Computer randomly chooses a choice from the options array.
+            var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
     </script>
 
