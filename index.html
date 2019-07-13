@@ -13,13 +13,10 @@
     <!--HTML for instructions and counters for game-->
     <div>
         <p id="directions-text">Guess what letter I'm thinking of</p>
-        <!--<p id="userchoice-text"></p>-->
-        <!--<p id="computerchoice-text"></p>-->
         <p id="wins-text"></p>
         <p id="losses-text"></p>
-        <p id="guesses-left-text"></p><!--NEW-->
-        <p id="guess-so-far-text"></p><!--NEW-->
-        <!--<p id="ties-text"></p>-->
+        <p id="guesses-left-text"></p>
+        <p id="guess-so-far-text"></p>
     </div>
 
     <script type="text/javascript">
@@ -45,27 +42,27 @@
         // This function runs whenever the user presses a key.
         document.onkeyup = function(event) {
 
-                // Determines which key was pressed.
-                var userGuess = event.key;
+            // Determines which key the user pressed.
+            var userGuess = event.key;
 
-                // Computer randomly chooses a choice from the options array.
-                var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+            // Computer randomly chooses a choice from the alphabet array.
+            var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
-                // This logic determines the outcome of the game (win/loss/tie), and increments the appropriate number
+            // This logic determines the outcome of the game (win/loss/tie), and increments the appropriate number.
 
-                if (userGuess === computerGuess) {
-                wins++;
-                } else if (userGuess !== computerGuess) {
-                guessesLeft--;
-                } else {
-                losses++;
-                }
-
-                // Display the user and computer guesses, and wins/losses/ties.
-                winsText.textContent = "Wins: " + wins;
-                lossesText.textContent = "Losses: " + losses;
-                guessesLeftText.textContent = "Guesses left: " + guessesLeft;
+            if (userGuess === computerGuess) {
+            wins++;
+            } else if (userGuess !== computerGuess) {
+            guessesLeft--;
+            } else {
+            losses++;
             }
+
+            // Display the wins, losses, guesses left, and user guesses so far.
+            winsText.innerHTML = "Wins: " + wins;
+            lossesText.innerHTML = "Losses: " + losses;
+            guessesLeftText.innerHTML = "Guesses left: " + guessesLeft;
+            guessSoFarText.innerHTML = "Your guesses so far: " + userGuess;
         };
 
     </script>
