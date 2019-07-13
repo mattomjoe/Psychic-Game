@@ -13,10 +13,10 @@
     <!--HTML for instructions and counters for game-->
     <div>
         <p id="directions-text">Guess what letter I'm thinking of</p>
-        <p id="wins-text"></p>
-        <p id="losses-text"></p>
-        <p id="guesses-left-text"></p>
-        <p id="guess-so-far-text"></p>
+        <p id="wins-text">Wins: </p>
+        <p id="losses-text">Losses: </p>
+        <p id="guesses-left-text">Guesses left: </p>
+        <p id="guess-so-far-text">Your guesses so far: </p>
     </div>
 
     <script type="text/javascript">
@@ -27,12 +27,12 @@
         var wins = 0;
         var losses = 0;
         var guessesLeft = 9;
-        var guessedSofar = "";
+        var guessedSofar = ""; //Blank string instead of 0
 
         // Create variables that hold references to the places in the HTML where we want to display things.
         var directionsText = document.getElementById("directions-text");
-        var userChoiceText = document.getElementById("userchoice-text");
-        var computerChoiceText = document.getElementById("computerchoice-text");
+        //var userChoiceText = document.getElementById("userchoice-text");
+        //var computerChoiceText = document.getElementById("computerchoice-text");
         var winsText = document.getElementById("wins-text");
         var lossesText = document.getElementById("losses-text");
         var guessesLeftText = document.getElementById("guesses-left-text");
@@ -50,15 +50,25 @@
 
             // This logic determines the outcome of the game (win/loss/tie), and increments the appropriate number.
 
-            if (userGuess === computerGuess) {
-            wins++;
+            if (userGuess === computerGuess) { //User's entry matches computer's selection
+            wins++; //Win total increases by 1
+            guessesLeft = 9; //Guesses left resets to 9
+            guessedSofar = ""; //Guesses so far resets to blank
+
+
+
+
             } else if (userGuess !== computerGuess) {
             guessesLeft--;
+            //Need to add to create array for letters to be added for guessedSofar
             } else {
             losses++;
             }
 
-            // Display the wins, losses, guesses left, and user guesses so far.
+
+
+
+            // Display the wins, losses, guesses left, and user guesses so far on HTML page.
             winsText.innerHTML = "Wins: " + wins;
             lossesText.innerHTML = "Losses: " + losses;
             guessesLeftText.innerHTML = "Guesses left: " + guessesLeft;
