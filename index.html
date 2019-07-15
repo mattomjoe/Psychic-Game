@@ -47,8 +47,8 @@
             function game() {
 
                 // Creating variables to hold the number of wins, losses, guesses left, and letters guessed.
-                wins = 0;
-                losses = 0;
+                //wins = 0;
+                //losses = 0;
                 guessesLeft = 9;
                 guessedSofar = []; //Blank array to hold user guesses
             }
@@ -83,9 +83,6 @@
                     guessedSofar.push(userGuess);
                 
                 }
-
-
-
 
                 // Display the wins, losses, guesses left, and user guesses so far on HTML page.
                 winsText.innerHTML = "Wins: " + wins;
