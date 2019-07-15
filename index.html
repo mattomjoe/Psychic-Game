@@ -76,19 +76,20 @@
                     //guessedSofar = []; //Guesses so far resets to blank
                     game();
 
-                } else if (userGuess !== computerGuess) {
+                } else if (userGuess !== computerGuess)  {
                     guessesLeft--;
                 
                     //Need to add to create array for letters to be added for guessedSofar
                     guessedSofar.push(userGuess);
-                
+                    document.getElementById("guess-so-far-text").innerHTML = "Your guesses so far: " + guessedSofar;
+
                 }
 
                 // Display the wins, losses, guesses left, and user guesses so far on HTML page.
                 winsText.innerHTML = "Wins: " + wins;
                 lossesText.innerHTML = "Losses: " + losses;
                 guessesLeftText.innerHTML = "Guesses left: " + guessesLeft;
-                guessSoFarText.innerHTML = "Your guesses so far: " + userGuess;
+                //guessSoFarText.innerHTML = "Your guesses so far: " + userGuess;
             };
 
         })
