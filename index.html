@@ -35,20 +35,14 @@
 
             // Create variables that hold references to the places in the HTML where we want to display things.
             var directionsText = document.getElementById("directions-text");
-            //var userChoiceText = document.getElementById("userchoice-text");
-            //var computerChoiceText = document.getElementById("computerchoice-text");
             var winsText = document.getElementById("wins-text");
             var lossesText = document.getElementById("losses-text");
             var guessesLeftText = document.getElementById("guesses-left-text");
             var guessSoFarText = document.getElementById("guess-so-far-text");
-            // var tiesText = document.getElementById("ties-text");
-
 
             function game() {
 
                 // Creating variables to hold the number of wins, losses, guesses left, and letters guessed.
-                //wins = 0;
-                //losses = 0;
                 guessesLeft = 9;
                 guessedSofar = []; //Blank array to hold user guesses
             }
@@ -66,14 +60,10 @@
 
                 if (userGuess === computerGuess) { //User's entry matches computer's selection
                     wins++; //Win total increases by 1
-                    //guessesLeft = 9; //Guesses left resets to 9
-                    //guessedSofar = []; //Guesses so far resets to blank
                     game();
 
                 } else if (userGuess !== computerGuess && guessesLeft === 1)  {
                     losses++;
-                    //guessesLeft = 9; //Guesses left resets to 9
-                    //guessedSofar = []; //Guesses so far resets to blank
                     game();
 
                 } else if (userGuess !== computerGuess)  {
@@ -89,7 +79,6 @@
                 winsText.innerHTML = "Wins: " + wins;
                 lossesText.innerHTML = "Losses: " + losses;
                 guessesLeftText.innerHTML = "Guesses left: " + guessesLeft;
-                //guessSoFarText.innerHTML = "Your guesses so far: " + userGuess;
             };
 
         })
