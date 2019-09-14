@@ -1,1 +1,26 @@
-# Psychic-Game
+# Psychic Game
+
+#### Project Description
+
+Psychic Game randomly selects a letter and then the user has to guess which letter it is within 9 tries. 
+
+
+#### Key Features
+
+* List of guesses tried so far
+
+* Wins and losses
+
+
+#### Technologies Used
+
+* HTML
+
+* CSS
+
+* JavaScript
+
+
+#### Outstanding Issues
+
+* Continue to refine UI
