@@ -4,6 +4,8 @@
 
 Psychic Game randomly selects a letter and then the user has to guess which letter it is within 9 tries. 
 
+Deployed site: https://mattomjoe.github.io/Psychic-Game/
+
 
 #### Key Features
 
